@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+	<data>
+		<!-- Formulario res_partner heredado mas campos nuevos -->
+		<record model="ir.ui.view" id="res_partner_form_view_inh">
+			<field name="name">res.partner.form.view.inh</field>
+			<field name="model">res.partner</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="base.view_partner_form" />
+			<field name="arch" type="xml">
+				<notebook position="inside">
+					<page string="DGI Panamá">
+						<group col="2" colspan="2">
+							<separator string="Datos Fiscales" colspan="2"/>
+								<field string="R.U.C." name="ruc" placeholder="RUC" label="RUC"/>
+								<field name="dv" placeholder="DV"/>
+								<field name="tipo_persona" placeholder="Tipo Persona" options='{"no_open": True}'/>
+						</group>
+					</page>
+			</notebook>
+			</field>
+		</record>
+	</data>
+</odoo>
